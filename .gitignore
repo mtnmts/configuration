@@ -2,3 +2,6 @@
 !.gitignore
 !install.sh
 !README.md
+!/config
+!config/*
+
