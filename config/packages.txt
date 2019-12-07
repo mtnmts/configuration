@@ -1,1 +1,1 @@
-build-essential llvm clang make git zlib1g-dev
+build-essential llvm clang make git
