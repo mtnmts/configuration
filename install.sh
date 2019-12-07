@@ -6,10 +6,11 @@ sudo apt install -y $(cat config/pyenv-deps.txt)
 sudo apt install -y $(cat config/pwntools-deps.txt)
 
 
-export PYENV_ROOT="$HOME/.pyenv:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-curl https://pyenv.run | bash
 rm -rf $PYENV_ROOT
+
+curl https://pyenv.run | bash
 pyenv init -
 pyenv virtualenv-init -
 pyenv install 3.8-dev
