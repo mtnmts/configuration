@@ -3,6 +3,9 @@
 !.gitignore
 !install.sh
 !README.md
+!.tmux.conf
+
+# Must be a better way to do this..
 !/config
 !config/*
 !/.config

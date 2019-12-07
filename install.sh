@@ -13,3 +13,5 @@ chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +'PlugInstall --sync' +qa
+chsh -s /usr/bin/fish $(whoami)
+
