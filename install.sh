@@ -24,5 +24,8 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +'PlugInstall --sync' +qa
 
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 chsh -s /usr/bin/fish $(whoami)
 rmdir bin

@@ -1,1 +1,1 @@
-build-essential llvm clang make git fish tmux nmap
+build-essential llvm clang make git fish tmux nmap silversearcher-ag
