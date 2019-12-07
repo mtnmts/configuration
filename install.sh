@@ -25,7 +25,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 nvim +'PlugInstall --sync' +qa
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 
 chsh -s /usr/bin/fish $(whoami)
 rmdir bin
