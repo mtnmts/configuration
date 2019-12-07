@@ -28,4 +28,3 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 chsh -s /usr/bin/fish $(whoami)
-rmdir bin
