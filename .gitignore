@@ -13,3 +13,6 @@
 !/.config/nvim
 .config/nvim/*
 !.config/nvim/init.nvim
+!/.config/fish
+.config/fish/*
+!.config/fish/config.fish
