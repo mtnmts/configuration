@@ -15,8 +15,10 @@ pyenv init -
 pyenv virtualenv-init -
 pyenv install 3.8-dev
 pyenv global 3.8-dev
+
 pip install --upgrade pip
 pip install -r config/pip.txt
+python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
 
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
