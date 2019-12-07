@@ -2,8 +2,8 @@
 sudo apt update
 sudo apt install -y $(cat config/packages.txt)
 curl https://pyenv.run | bash
-pyenv install 3.8-dev
-pyenv global 3.8-dev
+pyenv install 3.8.0
+pyenv global 3.8.0
 pip install $(cat config/pip.txt)
 sudo apt install nvim
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage

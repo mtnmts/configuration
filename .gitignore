@@ -1,7 +1,12 @@
 *
+
 !.gitignore
 !install.sh
 !README.md
 !/config
 !config/*
-
+!/.config
+.config/*
+!/.config/nvim
+.config/nvim/*
+!.config/nvim/init.nvim
