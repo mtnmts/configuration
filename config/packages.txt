@@ -1,1 +1,1 @@
-build-essential llvm clang make git fish tmux nmap silversearcher-ag p7zip-full
+build-essential llvm clang make git fish tmux nmap silversearcher-ag p7zip-full z3 gdb

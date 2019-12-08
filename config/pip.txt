@@ -1,1 +1,1 @@
-ipython
+ipython z3-solver
