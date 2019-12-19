@@ -1,1 +1,1 @@
-ipython z3-solver pyspark
+ipython z3-solver 

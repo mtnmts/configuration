@@ -16,8 +16,12 @@ pyenv virtualenv-init -
 pyenv install 3.8-dev
 pyenv install 2.7-dev
 pyenv install 3.7-dev
-pyenv global 3.8-dev
 
+pyenv shell 2.7-dev
+pip install -r config/pip-27.txt
+
+pyenv global 3.8-dev
+pyenv init -
 pip install --upgrade pip
 pip install -r config/pip.txt
 python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
