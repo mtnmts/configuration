@@ -20,6 +20,7 @@ pip install --upgrade pip
 pip install -r config/pip.txt
 python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
 
+
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
@@ -27,6 +28,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 nvim +'PlugInstall --sync' +qa
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all
+yes | ~/.fzf/install --all
 
 chsh -s /usr/bin/fish $(whoami)

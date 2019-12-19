@@ -27,7 +27,7 @@ Plug 'andymass/vim-matchup'
 " Fuzzy finder
 " Plug 'airblade/vim-rooter'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
 
 set completeopt=noinsert,menuone,noselect
@@ -216,6 +216,8 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <leader>L <Plug>(ale_lint)
 nmap <silent> <C-l> <Plug>(ale_detail)
 nmap <silent> <C-g> :close<cr>
+
+nmap <silent> <leader>f :FZF<CR>
 
 " <leader><leader> toggles between buffers
 nnoremap <leader><leader> <c-^>
