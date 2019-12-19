@@ -14,6 +14,8 @@ curl https://pyenv.run | bash
 pyenv init -
 pyenv virtualenv-init -
 pyenv install 3.8-dev
+pyenv install 2.7-dev
+pyenv install 3.7-dev
 pyenv global 3.8-dev
 
 pip install --upgrade pip
