@@ -6,7 +6,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/packages.txt)
 sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/pyenv-deps.txt)
 sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/pwntools-deps.txt)
 
-cp -R .config ~/.config
+cp -R .config $HOME/.config
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
