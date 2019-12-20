@@ -1,4 +1,5 @@
 #!/bin/bash
+export DEBIAN_FRONTEND=noninteractive
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y $(cat config/packages.txt) 
