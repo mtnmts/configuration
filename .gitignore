@@ -4,6 +4,7 @@
 !install.sh
 !README.md
 !.tmux.conf
+!Dockerfile
 
 # Must be a better way to do this..
 !/config
