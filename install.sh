@@ -2,9 +2,9 @@
 export DEBIAN_FRONTEND=noninteractive
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y $(cat config/packages.txt) 
-sudo apt install -y $(cat config/pyenv-deps.txt)
-sudo apt install -y $(cat config/pwntools-deps.txt)
+sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/packages.txt) 
+sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/pyenv-deps.txt)
+sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/pwntools-deps.txt)
 
 
 export PYENV_ROOT="$HOME/.pyenv"
