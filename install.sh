@@ -18,6 +18,7 @@ pyenv virtualenv-init -
 
 # 2.7-dev
 pyenv install 2.7-dev
+pyenv global 3.8-dev
 pyenv shell 2.7-dev
 pyenv init -
 pyenv exec pip install -r config/pip-27.txt
@@ -58,4 +59,4 @@ chmod +x ./rustup.sh
 rm rustup.sh
 
 # Switch to fish
-chsh -s /usr/bin/fish $(whoami)
+sudo chsh -s /usr/bin/fish $(whoami)
