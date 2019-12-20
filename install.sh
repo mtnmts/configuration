@@ -19,12 +19,12 @@ pyenv virtualenv-init -
 # 2.7-dev
 pyenv install 2.7-dev
 pyenv shell 2.7-dev
-pip install -r config/pip-27.txt
+pyenv exec pip install -r config/pip-27.txt
 
 # 3.7-dev
 pyenv install 3.7-dev
 pyenv shell 3.7-dev
-pip install -r config/pip-37.txt
+pyenv exec pip install -r config/pip-37.txt
 
 # 3.8-dev (Global)
 pyenv install 3.8-dev
