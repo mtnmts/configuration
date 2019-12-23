@@ -17,6 +17,7 @@ call plug#begin()
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
+Plug 'easymotion/vim-easymotion'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -112,6 +113,11 @@ nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
+map -= :tabnew<CR>
+map 00 :tabc<CR>
+map == :tabn<CR>
+map -- :tabp<CR>
+
 " Very magic by default
 nnoremap ? ?\v
 nnoremap / /\v
@@ -146,6 +152,7 @@ set shortmess+=c " don't give |ins-completion-menu| messages.
 set nolist
 set listchars=nbsp:¬,extends:»,precedes:«,trail:•
 set hidden
+
 let g:racer_cmd = "$HOME/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 let g:racer_insert_paren = 1
@@ -292,7 +299,8 @@ augroup END
 " Script plugins
 autocmd Filetype html,xml,xsl,php source ~/.config/nvim/scripts/closetag.vim
 
-set completeopt=menuone,noinsert
+set completeopt=longest,menuone
+" set completeopt=menuone,noinsert
 let g:deoplete#enable_at_startup = 1
 " =============================================================================
 " # Footer
