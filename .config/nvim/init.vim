@@ -150,6 +150,7 @@ let g:racer_cmd = "$HOME/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 let g:racer_insert_paren = 1
 
+
 " =============================================================================
 " # Keyboard shortcuts
 " =============================================================================
@@ -266,6 +267,11 @@ endif
 " Follow Rust code style rules
 au Filetype rust source ~/.config/nvim/scripts/spacetab.vim
 au Filetype rust set colorcolumn=100
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap gt <Plug>(rust-def-tab)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Help filetype detection
 autocmd BufRead *.plot set filetype=gnuplot

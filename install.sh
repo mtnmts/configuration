@@ -37,7 +37,9 @@ pyenv init -
 pyenv exec pip install -r config/pip-27.txt
 
 pyenv global 3.8-dev
-
+pyenv init -
+pyenv shell 3.8-dev
+pip3 install pynvim
 ## 3.7-dev
 ## pyenv install 3.7-dev
 ## pyenv shell 3.7-dev
