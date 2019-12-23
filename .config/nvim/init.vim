@@ -141,7 +141,6 @@ set diffopt+=iwhite " No whitespace in vimdiff
 " Make diffing better: https://vimways.org/2018/the-power-of-diff/
 set diffopt+=algorithm:patience
 set diffopt+=indent-heuristic
-set colorcolumn=80 " and give me a colored column
 highlight Pmenu ctermbg=gray guibg=gray
 set showcmd " Show (partial) command in status line.
 set mouse=a " Enable mouse usage (all modes) in terminals
@@ -227,9 +226,9 @@ nnoremap <right> :bn<CR>
 nnoremap j gj
 nnoremap k gk
 nmap <silent> <leader>f :FZF<CR>
+nmap <silent> <leader>b :Buffers<CR>
 
-" <leader><leader> toggles between buffers
-nnoremap <leader><leader> <c-^>
+nnoremap <M-a> <c-^>
 
 " <leader>= reformats current tange
 nnoremap <leader>= :'<,'>RustFmtRange<cr>
@@ -273,7 +272,6 @@ endif
 
 " Follow Rust code style rules
 au Filetype rust source ~/.config/nvim/scripts/spacetab.vim
-au Filetype rust set colorcolumn=100
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
