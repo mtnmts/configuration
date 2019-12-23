@@ -24,12 +24,17 @@ Plug 'w0rp/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 
+" Completions
+Plug 'davidhalter/jedi-vim'
+Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
+Plug 'racer-rust/vim-racer'
+
 " Fuzzy finder
 " Plug 'airblade/vim-rooter'
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
 
+call plug#end()
 set completeopt=noinsert,menuone,noselect
 " tab to select
 " and don't hijack my enter key
@@ -140,6 +145,10 @@ set shortmess+=c " don't give |ins-completion-menu| messages.
 " Verbose: set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•
 set nolist
 set listchars=nbsp:¬,extends:»,precedes:«,trail:•
+set hidden
+let g:racer_cmd = "$HOME/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:racer_insert_paren = 1
 
 " =============================================================================
 " # Keyboard shortcuts
@@ -209,14 +218,6 @@ nnoremap <right> :bn<CR>
 " Move by line
 nnoremap j gj
 nnoremap k gk
-
-" Jump to next/previous error
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nmap <silent> <leader>L <Plug>(ale_lint)
-nmap <silent> <C-l> <Plug>(ale_detail)
-nmap <silent> <C-g> :close<cr>
-
 nmap <silent> <leader>f :FZF<CR>
 
 " <leader><leader> toggles between buffers
@@ -261,8 +262,6 @@ if has("autocmd")
   au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" Auto-make less files on save
-autocmd BufWritePost *.less if filereadable("Makefile") | make | endif
 
 " Follow Rust code style rules
 au Filetype rust source ~/.config/nvim/scripts/spacetab.vim
@@ -275,6 +274,7 @@ autocmd BufRead *.lds set filetype=ld
 autocmd BufRead *.tex set filetype=tex
 autocmd BufRead *.trm set filetype=c
 autocmd BufRead *.xlsx.axlsx set filetype=ruby
+autocmd BufRead *.rs set filetype=rust
 
 augroup rust
     autocmd!
@@ -286,18 +286,12 @@ augroup END
 " Script plugins
 autocmd Filetype html,xml,xsl,php source ~/.config/nvim/scripts/closetag.vim
 
-
-" =============================================================================
-" Rust Stuff
-" =============================================================================
-" Automatically start language servers.
-let g:LanguageClient_autoStart = 1
-
+set completeopt=menuone,noinsert
+let g:deoplete#enable_at_startup = 1
 " =============================================================================
 " # Footer
 " =============================================================================
 
-" nvim
 if has('nvim')
 	runtime! plugin/python_setup.vim
-endif
+ endif
