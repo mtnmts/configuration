@@ -4,3 +4,4 @@ set -gx RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+pyenv init - | source
