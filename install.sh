@@ -57,6 +57,7 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 sudo mv kubectl /usr/local/bin/kubectl
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +'PlugInstall --sync' +qa
+nvim +'UpdateRemotePlugins' +qa
 
 # FZF
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
