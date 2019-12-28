@@ -63,6 +63,13 @@ nvim +'UpdateRemotePlugins' +qa
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install --all
 
+#AFL
+wget https://github.com/google/AFL/archive/v2.56b.zip 
+unzip v2.56b.zip
+cd AFL-2.56b && sudo make install && cd ..
+rm -rf AFL-2.56b
+rm v2.56b.zip
+
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup.sh
 chmod +x ./rustup.sh
