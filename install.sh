@@ -16,6 +16,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 rm -rf $PYENV_ROOT
 
+# QEMU
+sudo apt-get build-dep qemu
+
 # Python
 curl https://pyenv.run | bash
 pyenv init -
@@ -69,6 +72,10 @@ unzip v2.56b.zip
 cd AFL-2.56b && sudo make install && cd ..
 rm -rf AFL-2.56b
 rm v2.56b.zip
+
+# Shellphish
+pip install git+https://github.com/shellphish/shellphish-afl
+pip install git+https://github.com/shellphish/fuzzer
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup.sh
