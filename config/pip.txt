@@ -2,3 +2,4 @@ ipython
 z3-solver 
 angr
 pipenv
+pygments

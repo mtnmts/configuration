@@ -98,6 +98,9 @@ fi
 pip install git+https://github.com/shellphish/shellphish-afl
 pip install git+https://github.com/shellphish/fuzzer
 
+# setup gdb
+wget -P ~ https://git.io/.gdbinit
+
 # Rust
 which cargo
 if [ $? -ne 0 ]; then
