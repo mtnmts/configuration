@@ -1,6 +1,7 @@
 *
 
 !.gitignore
+!TODO.md
 !install.sh
 !README.md
 !.tmux.conf
