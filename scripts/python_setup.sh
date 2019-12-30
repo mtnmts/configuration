@@ -27,7 +27,4 @@ $PYENV shell 3.8-dev
 
 pip3 install pynvim
 
-# Shellphish
-pip install git+https://github.com/shellphish/shellphish-afl
-pip install git+https://github.com/shellphish/fuzzer
 
