@@ -3,11 +3,7 @@
 
 which nvim
 if [ $? -ne 0 ]; then
-	wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-	tar xzf nvim-linux64.tar.gz
-	sudo mv nvim-linux64/bin/nvim /usr/local/bin/nvim
-	chmod u+x /usr/local/bin/nvim
-	rm -rf nvim-linux64.tar.gz nvim-linux64/
+	sudo apt install -y neovim
 fi
 
 which kubectl 
