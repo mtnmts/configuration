@@ -2,11 +2,12 @@
 # Neovim, Kubectl
 
 which nvim
+NVIM=/usr/local/bin/nvim
 if [ $? -ne 0 ]; then
 	wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 	tar xzf nvim-linux64.tar.gz
-	sudo mv nvim-linux64/bin/nvim /usr/local/bin/nvim
-	chmod u+x /usr/local/bin/nvim
+	sudo mv nvim-linux64/bin/nvim $NVIM
+	chmod u+x $NVIM
 	rm -rf nvim-linux64.tar.gz nvim-linux64/
 fi
 
@@ -18,8 +19,8 @@ if [ $? -ne 0 ]; then
 fi
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-nvim +'PlugInstall --sync' +qa
-nvim +'UpdateRemotePlugins' +qa
+$NVIM +'PlugInstall --sync' +qa
+$NVIM +'UpdateRemotePlugins' +qa
 
 # FZF
 which fzf 
