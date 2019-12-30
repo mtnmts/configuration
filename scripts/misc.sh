@@ -2,13 +2,13 @@
 # Neovim, Kubectl
 
 which nvim
-NVIM=/usr/local/bin/nvim
 if [ $? -ne 0 ]; then
+	NVIM=/usr/local/bin/nvim
 	wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 	tar xzf nvim-linux64.tar.gz
 	sudo mv nvim-linux64/bin/nvim $NVIM
-	chmod u+x $NVIM
-	rm -rf nvim-linux64.tar.gz nvim-linux64/
+	sudo chmod u+x $NVIM
+	sudo rm -rf nvim-linux64.tar.gz nvim-linux64/
 fi
 
 which kubectl 
