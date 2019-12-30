@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export PATH=$PYENV_ROOT/bin:$PATH
 pyenv init -
 pyenv virtualenv-init -
 
