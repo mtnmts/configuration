@@ -10,7 +10,12 @@ ENV LOGS /var/log/setup-script/
 
 RUN mkdir -p $LOGS
 RUN chmod +x scripts/*
-RUN scripts/apt.sh > $LOGS/apt.log 2>&1
+RUN scripts/apt1.sh > $LOGS/apt6.log 2>&1
+RUN scripts/apt2.sh > $LOGS/apt2.log 2>&1
+RUN scripts/apt3.sh > $LOGS/apt3.log 2>&1
+RUN scripts/apt4.sh > $LOGS/apt4.log 2>&1
+RUN scripts/apt5.sh > $LOGS/apt5.log 2>&1
+RUN scripts/ap6t.sh > $LOGS/apt6.log 2>&1
 RUN scripts/copy_config.sh > $LOGS/copy_config.log 2>&1
 RUN scripts/pyenv.sh > $LOGS/pyenv.log 2>&1
 RUN scripts/python_setup.sh > $LOGS/python_setup.log 2>&1
