@@ -11,16 +11,16 @@ ENV LOGS /var/log/setup-script/
 RUN mkdir -p $LOGS
 RUN chmod +x scripts/*
 RUN ls -laR .
-RUN scripts/apt1.sh > $LOGS/apt1.log
-RUN scripts/apt2.sh > $LOGS/apt2.log 
-RUN scripts/apt3.sh > $LOGS/apt3.log
-RUN scripts/apt4.sh > $LOGS/apt4.log
-RUN scripts/apt5.sh > $LOGS/apt5.log
-RUN scripts/apt6.sh > $LOGS/apt6.log 
-RUN scripts/copy_config.sh > $LOGS/copy_config.log
-RUN scripts/pyenv.sh > $LOGS/pyenv.log 
-RUN scripts/python_setup.sh > $LOGS/python_setup.log 
-RUN scripts/rust.sh > $LOGS/rust.log 
-RUN scripts/misc.sh > $LOGS/misc.log 
+RUN scripts/apt1.sh
+RUN scripts/apt2.sh
+RUN scripts/apt3.sh
+RUN scripts/apt4.sh
+RUN scripts/apt5.sh
+RUN scripts/apt6.sh
+RUN scripts/copy_config.sh
+RUN scripts/pyenv.sh
+RUN scripts/python_setup.sh
+RUN scripts/rust.sh
+RUN scripts/misc.sh
 
 CMD ["/usr/bin/fish"]
