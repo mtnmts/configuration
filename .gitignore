@@ -8,6 +8,8 @@
 !Dockerfile
 
 # Must be a better way to do this..
+!/scripts
+!scripts/*
 !/config
 !config/*
 !/.config

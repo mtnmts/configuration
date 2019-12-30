@@ -227,6 +227,7 @@ nnoremap j gj
 nnoremap k gk
 nmap <silent> <leader>f :FZF<CR>
 nmap <silent> <leader>b :Buffers<CR>
+nmap <silent> <leader>x :b#<CR>
 
 nnoremap <M-a> <c-^>
 
