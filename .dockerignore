@@ -6,7 +6,6 @@
 !README.md
 !.tmux.conf
 !Dockerfile
-!.dockerignore
 
 # Must be a better way to do this..
 !/scripts
