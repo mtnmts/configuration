@@ -10,6 +10,7 @@ ENV LOGS /var/log/setup-script/
 
 RUN mkdir -p $LOGS
 RUN chmod +x scripts/*
+RUN ls -laR .
 RUN scripts/apt1.sh > $LOGS/apt1.log
 RUN scripts/apt2.sh > $LOGS/apt2.log 2>&1
 RUN scripts/apt3.sh > $LOGS/apt3.log 2>&1
