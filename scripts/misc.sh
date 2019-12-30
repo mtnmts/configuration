@@ -3,7 +3,7 @@
 
 which nvim
 if [ $? -ne 0 ]; then
-	curl https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+	wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 	tar xzf nvim-linux64.tar.gz
 	sudo mv nvim-linux64/bin/nvim /usr/local/bin/nvim
 	chmod u+x /usr/local/bin/nvim
