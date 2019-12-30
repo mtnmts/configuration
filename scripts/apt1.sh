@@ -3,8 +3,7 @@
 export DEBIAN_FRONTEND=noninteractive
 sudo apt update
 sudo apt upgrade -y
-sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/pyenv-deps.txt)
-sudo DEBIAN_FRONTEND=noninteractive apt install -y $(cat config/pwntools-deps.txt)
+# sudo apt install apt-utils
 
 # QEMU
-sudo apt-get build-dep qemu
+# sudo apt-get build-dep qemu

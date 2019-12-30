@@ -1,26 +1,29 @@
 #!/bin/bash
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+PYENV=$PYENV_ROOT/bin/pyenv
 
-pyenv init -
-pyenv virtualenv-init -
+eval "$($PYENV init -)" 
+eval "$($PYENV virtualenv-init -)"
 
 # 3.8-dev (Global)
-pyenv install 3.8-dev
-pyenv global 3.8-dev
-pyenv init -
-pyenv exec pip install --upgrade pip
-pyenv exec pip install -r config/pip.txt
-pyenv exec pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
+$PYENV install 3.8-dev
+$PYENV global 3.8-dev
+eval "$($PYENV init -)" 
+$PYENV exec pip install --upgrade pip
+$PYENV exec pip install -r config/pip.txt
+$PYENV exec pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
 # 2.7-dev
 
-pyenv install 2.7-dev
-pyenv global 2.7-dev
-pyenv shell 2.7-dev
-pyenv init -
-pyenv exec pip install -r config/pip-27.txt
+$PYENV install 2.7-dev
+$PYENV global 2.7-dev
+$PYENV shell 2.7-dev
+eval "$($PYENV init -)" 
+$PYENV exec pip install -r config/pip-27.txt
 
-pyenv global 3.8-dev
-pyenv init -
-pyenv shell 3.8-dev
+$PYENV global 3.8-dev
+eval "$($PYENV init -)" 
+$PYENV shell 3.8-dev
 
 pip3 install pynvim
 

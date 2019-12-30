@@ -10,16 +10,20 @@ ENV LOGS /var/log/setup-script/
 
 RUN mkdir -p $LOGS
 RUN chmod +x scripts/*
-RUN scripts/apt1.sh > $LOGS/apt6.log 2>&1
-RUN scripts/apt2.sh > $LOGS/apt2.log 2>&1
-RUN scripts/apt3.sh > $LOGS/apt3.log 2>&1
-RUN scripts/apt4.sh > $LOGS/apt4.log 2>&1
-RUN scripts/apt5.sh > $LOGS/apt5.log 2>&1
-RUN scripts/ap6t.sh > $LOGS/apt6.log 2>&1
-RUN scripts/copy_config.sh > $LOGS/copy_config.log 2>&1
-RUN scripts/pyenv.sh > $LOGS/pyenv.log 2>&1
-RUN scripts/python_setup.sh > $LOGS/python_setup.log 2>&1
-RUN scripts/rust.sh > $LOGS/rust.log 2>&1
-RUN scripts/misc.sh > $LOGS/misc.log 2>&1
+RUN ls -laR .
+RUN scripts/apt1.sh
+RUN scripts/apt2.sh
+RUN scripts/apt3.sh
+RUN scripts/apt4.sh
+RUN scripts/apt5.sh
+RUN scripts/apt6.sh
+RUN scripts/copy_config.sh
+RUN scripts/pyenv.sh
+RUN cat ~/.bash_profile && ls -la $HOME/.pyenv/bin
+ENV PYENV_ROOT "${HOME}/.pyenv"
+ENV PATH "${PYENV_ROOT}/bin:${PATH}"
+RUN scripts/python_setup.sh
+RUN scripts/rust.sh
+RUN scripts/misc.sh
 
 CMD ["/usr/bin/fish"]
