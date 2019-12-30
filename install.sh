@@ -1,10 +1,9 @@
 #!/bin/bash
 
-
-bash mkdir -p ${LOGS}
-bash scripts/apt.sh &> ${LOGS}/apt.log
-bash scripts/copy_config.sh &> ${logs}/copy_config.log
-bash scripts/pyenv.sh &> ${logs}/pyenv.log
-bash scripts/python_setup.sh &> ${logs}/python_setup.log
-bash scripts/rust.sh &> ${logs}/rust.log
-bash scripts/misc.sh &> ${logs}/misc.log
+bash mkdir -p $LOGS
+bash scripts/apt.sh > $LOGS/apt.log 2>&1
+bash scripts/copy_config.sh > $LOGS/copy_config.log 2>&1
+bash scripts/pyenv.sh > $LOGS/pyenv.log 2>&1
+bash scripts/python_setup.sh > $LOGS/python_setup.log 2>&1
+bash scripts/rust.sh > $LOGS/rust.log 2>&1
+bash scripts/misc.sh > $LOGS/misc.log 2>&1 

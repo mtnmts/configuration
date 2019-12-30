@@ -8,13 +8,13 @@ RUN unzip master.zip
 WORKDIR /configuration-master
 ENV LOGS /var/log/setup-script/
 
-RUN bash mkdir -p ${LOGS}
+RUN mkdir -p $LOGS
 RUN chmod +x scripts/*
-RUN bash scripts/apt.sh &> ${LOGS}/apt.log
-RUN bash scripts/copy_config.sh &> ${logs}/copy_config.log
-RUN bash scripts/pyenv.sh &> ${logs}/pyenv.log
-RUN bash scripts/python_setup.sh &> ${logs}/python_setup.log
-RUN bash scripts/rust.sh &> ${logs}/rust.log
-RUN bash scripts/misc.sh &> ${logs}/misc.log
+RUN scripts/apt.sh > $LOGS/apt.log 2>&1
+RUN scripts/copy_config.sh > $LOGS/copy_config.log 2>&1
+RUN scripts/pyenv.sh > $LOGS/pyenv.log 2>&1
+RUN scripts/python_setup.sh > $LOGS/python_setup.log 2>&1
+RUN scripts/rust.sh > $LOGS/rust.log 2>&1
+RUN scripts/misc.sh > $LOGS/misc.log 2>&1
 
 CMD ["/usr/bin/fish"]
