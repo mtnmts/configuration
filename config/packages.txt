@@ -1,1 +1,0 @@
-build-essential llvm clang make git fish tmux nmap silversearcher-ag p7zip-full z3 gdb default-jdk ruby gcc libfuse2 gcc-multilib libtool automake autoconf bison debootstrap debian-archive-keyring libtool-bin libglib2.0-dev
