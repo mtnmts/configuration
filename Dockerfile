@@ -19,6 +19,9 @@ RUN scripts/apt5.sh
 RUN scripts/apt6.sh
 RUN scripts/copy_config.sh
 RUN scripts/pyenv.sh
+RUN cat ~/.bash_profile && ls -la $HOME/.pyenv/bin
+ENV PYENV_ROOT "${HOME}/.pyenv"
+ENV PATH "${PYENV_ROOT}/bin:${PATH}"
 RUN scripts/python_setup.sh
 RUN scripts/rust.sh
 RUN scripts/misc.sh
