@@ -4,11 +4,9 @@
 NVIM=/usr/local/bin/nvim
 which nvim
 if [ $? -ne 0 ]; then
-	wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-	tar xzf nvim-linux64.tar.gz
-	sudo mv nvim-linux64/bin/nvim $NVIM
-	sudo chmod u+x $NVIM
-	sudo rm -rf nvim-linux64.tar.gz nvim-linux64/
+	curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+	chmod u+x nvim.appimage
+	sudo mv nvim.appimage $NVIM
 fi
 
 which kubectl 
