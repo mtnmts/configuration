@@ -1,9 +1,9 @@
 #!/bin/bash
 # Neovim, Kubectl
 
+NVIM=/usr/local/bin/nvim
 which nvim
 if [ $? -ne 0 ]; then
-	NVIM=/usr/local/bin/nvim
 	wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 	tar xzf nvim-linux64.tar.gz
 	sudo mv nvim-linux64/bin/nvim $NVIM
@@ -41,7 +41,10 @@ fi
 
 
 # setup gdb
-wget -P ~ https://git.io/.gdbinit
+ls ~/.gdbinit
+if [ $? -ne 0 ]; then
+	wget -P ~ https://git.io/.gdbinit
+fi
 
 
 # Switch to fish
